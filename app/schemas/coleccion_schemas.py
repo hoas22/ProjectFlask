@@ -34,6 +34,7 @@ class ColeccionResponseSchema(SQLAlchemyAutoSchema):
     class Meta:
         model = ColeccionModel
         ordered = True
+        include_fk =True
 
     users = Nested('UsersResponseSchema', exclude=['coleccion'], many=True)
     pokemon = Nested('PokemonResponseSchema', exclude=['coleccion'], many=True)

@@ -74,10 +74,10 @@ class ColeccionController:
                 db.session.add(record)
                 db.session.commit()
                 return {
-                    'message': f'El rol {id} fue actualizado'
+                    'message': f'La coleccion {id} fue actualizado'
                 }, 200
             return {
-                'message': 'no se encontro el rol'
+                'message': 'no se encontro la coleccion'
             }, 404
         except Exception as e:
             db.session.rollback()
@@ -94,10 +94,10 @@ class ColeccionController:
                 db.session.add(record)
                 db.session.commit()
                 return {
-                    'message': f'El rol {id} fue deshabilitado'
+                    'message': f'La coleccion {id} fue deshabilitado'
                 }, 200
             return {
-                'message': 'no se encontro el rol'
+                'message': 'no se encontro la coleccion'
             }, 404
         except Exception as e:
             db.session.rollback()
